@@ -35,7 +35,7 @@ public class HolaMundoController {
 
     @GetMapping("/DividirValor/{ValorUno}/{ValorDos}")
     public String Dividir(@PathVariable int ValorUno, @PathVariable int ValorDos) {
-        if(valorDos==0){
+        if(ValorDos==0){
             return "No puede dividir por cero";
         }else
         {
