@@ -35,8 +35,13 @@ public class HolaMundoController {
 
     @GetMapping("/DividirValor/{ValorUno}/{ValorDos}")
     public String Dividir(@PathVariable int ValorUno, @PathVariable int ValorDos) {
-        double Resultado = ValorUno / ValorDos;
-        return "Resultado: " + Resultado;
+        if(valorDos==0){
+            return "No puede dividir por cero";
+        }else
+        {
+            double Resultado = ValorUno / ValorDos;
+            return "Resultado: " + Resultado;
+        }
     }
 
 
